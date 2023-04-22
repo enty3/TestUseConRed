@@ -1,6 +1,17 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import React, { createContext, useContext, useReducer } from 'react';
+import Provider from '@/components/Provider';
+import '../styles/globals.css';
+import LoginForm from '@/components/LoginForm';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+const App = () => {
+  return (
+      <Provider>
+        <div>
+          <h1>Login form</h1>
+          <LoginForm />
+        </div>
+      </Provider>
+  );
+};
+
+export default App;
